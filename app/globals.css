@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: #F4F8FC;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Mobile-first responsive */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* PWA viewport */
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+}
+
+/* Hide scrollbar for modal-like sections */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Safe area for notches */
+.safe-area-inset {
+  padding-top: max(1rem, env(safe-area-inset-top));
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
